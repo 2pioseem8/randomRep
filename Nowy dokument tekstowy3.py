@@ -1,7 +1,7 @@
 #! python
 from __future__ import print_function
 import fitz
-import sys, os, subprocess, tempfile, time
+import sys, os, subprocess, tempfile, time,random
 '''
 Optimizes a PDF with FileOptimizer. But as "/Producer" and "/Creator" get
 spoiled by this, we first save metadata and restore it after optimization.
