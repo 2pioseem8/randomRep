@@ -64,7 +64,7 @@ while True:
         # czy wyrazu nie ma w s³owniku? a mo¿e chcemy go zast¹piæ?
         if wobcy not in slownik or op == "t":
             znaczenia = t[1].split(",")  # podane znaczenia zapisujemy w liœcie
-            znaczenia = map(oczysc, znaczenia)  # oczyszczamy elementy listy
+            znaczenia = map(oczysc, znaczenia)  # oczyszczamy elementy 
             slownik[wobcy] = znaczenia
             nowy = True
     else:
