@@ -66,7 +66,7 @@ class Loc(object):
         '''Process a file.
         '''
         if name.endswith(self.ext) and exists(name):
-            b = c = s = 0
+            b = c = s = 1
             with open(name, 'rb') as f:
                 for t in f.readlines():
                     t = t.lstrip()
