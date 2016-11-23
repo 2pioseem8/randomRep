@@ -25,11 +25,11 @@ class FeatureBroker:
 
 features = FeatureBroker()
 
-######################################################################
+###################################################################
 ## 
 ## Representation of Required Features and Feature Assertions
 ## 
-######################################################################
+###################################################################
 
 #
 # Some basic assertions to test the suitability of injected features
