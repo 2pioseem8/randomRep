@@ -1,32 +1,32 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import math  # do³¹czamy bibliotekê matematyczn¹
+import math  # doÅ‚Ä…czamy bibliotekÄ™ matematycznÄ…
 
-op = "t"  # deklarujemy i inicjujemy zmienn¹ pomocnicz¹
-while op != "n":  # dopóki wartoœæ zmiennej op jest inna ni¿ znak "n"
-    a, b, c = input("Podaj 3 boki trójk¹ta (oddzielone przecinkami): ")
-    # a, b, c = [int(x) for x in raw_input("Podaj 3 boki trójk¹ta (oddzielone spacjami): ").split()]
+op = "t"  # deklarujemy i inicjujemy zmiennÄ… pomocniczÄ…
+while op != "n":  # dopÃ³ki wartoÅ›Ä‡ zmiennej op jest inna niÅ¼ znak "n"
+    a, b, c = input("Podaj 3 boki trÃ³jkÄ…ta (oddzielone przecinkami): ")
+    # a, b, c = [int(x) for x in raw_input("Podaj 3 boki trÃ³jkÄ…ta (oddzielone spacjami): ").split()]
 
-    if a + b > c and a + c > b and b + c > a:  # warunek z³o¿ony
-        print "Z podanych boków mo¿na zbudowaæ trójk¹t."
-        # czy boki spe³niaj¹ warunki trójk¹ta prostok¹tnego?
+    if a + b > c and a + c > b and b + c > a:  # warunek zÅ‚oÅ¼ony
+        print "Z podanych bokÃ³w moÅ¼na zbudowaÄ‡ trÃ³jkÄ…t."
+        # czy boki speÅ‚niajÄ… warunki trÃ³jkÄ…ta prostokÄ…tnego?
         if ((a**2 + b**2) == c**2 or (a**2 + c**2) == b**2 or (b**2 + c**2) == a**2):
-            print "Do tego prostok¹tny!"
+            print "Do tego prostokÄ…tny!"
 
-        # na wyjœciu mo¿emy wyprowadzaæ wyra¿enia
-        print "Obwód wynosi:", (a + b + c)
-        p = 0.5 * (a + b + c)  # obliczmy wspó³czynnik wzoru Herona
+        # na wyjÅ›ciu moÅ¼emy wyprowadzaÄ‡ wyraÅ¼enia
+        print "ObwÃ³d wynosi:", (a + b + c)
+        p = 0.5 * (a + b + c)  # obliczmy wspÃ³Å‚czynnik wzoru Herona
         # liczymy pole ze wzoru Herona
         P = math.sqrt(p * (p - a) * (p - b) * (p - c))
-        print "Pole wynosi:", P
-        op = "n"  # ustawiamy zmienn¹ na "n", aby wyjœæ z pêtli while
+        print "Pole rowna sie:", P
+        op = "n"  # ustawiamy zmiennÄ… na "n", aby wyjÅ›Ä‡ z pÄ™tli while
     
 
 
     else:
-        print "Z podanych odcinków nie mo¿na utworzyæ trójk¹ta prostok¹tnego."
-        op = raw_input("Spróbujesz jeszcze raz (t/n): ")
+        print "Z podanych odcinkÃ³w nie moÅ¼na utworzyÄ‡ trÃ³jkÄ…ta prostokÄ…tnego."
+        op = raw_input("SprÃ³bujesz jeszcze raz (t/n): ")
 
 
 print "Do zobaczenia..."
