@@ -29,4 +29,4 @@ while op != "n":  # dopóki wartoœæ zmiennej op jest inna ni¿ znak "n"
         op = raw_input("Spróbujesz jeszcze raz (t/n): ")
 
 
-print "Do zobaczenia..."
+print "Narazie"
