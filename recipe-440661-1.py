@@ -21,14 +21,14 @@ class ExcelDocument(object):
     def sheets(self):
         """ Returns a list of the name of the sheets found in the document.
         """
-        result = []
+        result1 = []
         recordset = self.connection.OpenSchema(20)
         while not recordset.EOF:
             result.append(recordset.Fields[2].Value)
             recordset.MoveNext()
         recordset.Close()
         del recordset
-        return result
+        return result1
 
     def sheet(self,name,encoding=None,order_by=None):
         """ Returns a sheet object by name. Use sheets() to obtain a list of
