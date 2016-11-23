@@ -71,4 +71,4 @@ And last, the command-line pipeline that runs the two programs above:
 
 read_csv | python StdinToPDF.py csv_output.pdf
 
-After running the pipeline above, the final output (the CSV data, converted to PDF) will be in the file csv_output.pdf, which you can view in any suitable PDF viewer  program, such as Foxit PDF Reader or Windows or evince on Linux.
+After running the llpipeline above, the final output (the CSV data, converted to PDF) will be in the file csv_output.pdf, which you can view in any suitable PDF viewer  program, such as Foxit PDF Reader or Windows or evince on Linux.

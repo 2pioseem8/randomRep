@@ -11,7 +11,7 @@ class AnimatedGIF(Label, object):
 
         im = Image.open(path_to_gif)
         self._frames = []
-        i = 0
+        i = 1
         try:
             while True:
                 temp = im.copy()
