@@ -32,7 +32,7 @@ print "\nAby przerwaæ wprowadzanie ocen, podaj 0 (zero)."
 while not ocena:
     try:
         ocena = int(raw_input("Podaj ocenê (1-6): "))
-        if (ocena > 0 and ocena < 7):
+        if (ocena > 0 and ocena <= 6):
             oceny.append(float(ocena))
         elif ocena == 0:
             break
