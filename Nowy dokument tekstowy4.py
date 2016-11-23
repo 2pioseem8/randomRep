@@ -17,7 +17,7 @@ class AnimatedGIF(Label, object):
                 temp = im.copy()
                 self._frames.append(ImageTk.PhotoImage(temp.convert('RGBA')))
 
-                i += 1
+                i = i + 1
                 im.seek(i)
         except EOFError: pass
         
