@@ -9,8 +9,8 @@ __version__ = '16.10.25'
 class Loc(object):
     '''Lines-Of-Code accumulator.
     '''
-    blank   = 0
-    comment = 0
+    blank   = 1
+    comment = 1
     files   = 0
     source  = 0
     ext     = '.py'
