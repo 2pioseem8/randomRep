@@ -1,35 +1,35 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import os.path  # modu³ udostêpniaj¹cy funkcjê isfile()
+import os.path  # moduÅ‚ udostÄ™pniajÄ…cy funkcjÄ™ isfile()
 
 print """Podaj dane w formacie:
 wyraz obcy: znaczenie1, znaczenie2
-Aby zakoñczyæ wprowadzanie danych, podaj 0.
+Aby zakoÅ„czyÄ‡ wprowadzanie danych, podaj 0.
 """
 
-sFile = "slownik.txt"  # nazwa pliku zawieraj¹cego wyrazy i ich t³umaczenia
-slownik = {}  # pusty s³ownik
-# wobce = set() # pusty zbiór wyrazów obcych
+sFile = "slownik.txt"  # nazwa pliku zawierajÄ…cego wyrazy i ich tÅ‚umaczenia
+slownik = {}  # pusty sÅ‚ownik
+# wobce = set() # pusty zbiÃ³r wyrazÃ³w obcych
 
 
 def otworz(plik):
-    if os.path.isfile(sFile):  # czy istnieje plik s³ownika?
-        with open(sFile, "r") as sTxt:  # otwórz plik do odczytu
-            for line in sTxt:  # przegl¹damy kolejne linie
-                # rozbijamy liniê na wyraz obcy i t³umaczenia
+    if os.path.isfile(sFile):  # czy istnieje plik ???
+        with open(sFile, "r") as sTxt:  # otwÃ³rz plik do odczytu
+            for line in sTxt:  # przeglÄ…damy kolejne linie
+                # rozbijamy liniÄ™ na wyraz obcy i tÅ‚umaczenia
                 t = line.split(":")
                 wobcy = t[0]
                 # usuwamy znaki nowych linii
                 znaczenia = t[1].replace("\n", "")
-                znaczenia = znaczenia.split(",")  # tworzymy listê znaczeñ
-                # dodajemy do s³ownika wyrazy obce i ich znaczenia
+                znaczenia = znaczenia.split(",")  # tworzymy listÄ™ znaczeÅ„
+                # dodajemy do sÅ‚ownika wyrazy obce i ich znaczenia
                 slownik[wobcy] = znaczenia
-    return len(slownik)  # zwracamy iloœæ elementów w s³owniku
+    return len(slownik)  # zwracamy iloÅ›Ä‡ elementÃ³w w sÅ‚owniku
 
 
 def zapisz(slownik):
-    # otwieramy plik do zapisu, istniej¹cy plik zostanie nadpisany(!)
+    # otwieramy plik do zapisu, istniejÄ…cy plik zostanie nadpisany(!)
     file1 = open(sFile, "w")
     for wobcy in slownik:
         # "sklejamy" znaczenia przecinkami w jeden napis
@@ -41,34 +41,34 @@ def zapisz(slownik):
 
 
 def oczysc(str):
-    str = str.strip()  # usuñ pocz¹tkowe lub koñcowe bia³e znaki
-    str = str.lower()  # zmieñ na ma³e litery
+    str = str.strip()  # usuÅ„ poczÄ…tkowe lub koÅ„cowe biaÅ‚e znaki
+    str = str.lower()  # zmieÅ„ na maÅ‚e litery
     return str
 
-# zmienna oznaczaj¹ca, ¿e u¿ytkownik uzupe³ni³ lub zmieni³ s³ownik
+# zmienna oznaczajÄ…ca, Å¼e uÅ¼ytkownik uzupeÅ‚niÅ‚ lub zmieniÅ‚ sÅ‚ownik
 nowy = False
 ileWyrazow = otworz(sFile)
-print "Wpisów w bazie:", ileWyrazow
+print "WpisÃ³w w bazie:", ileWyrazow
 
-# g³ówna pêtla programu
+# gÅ‚Ã³wna pÄ™tla programu
 while True:
     dane = raw_input("Podaj dane: ")
     t = dane.split(":")
     wobcy = t[0].strip().lower()  # robimy to samo, co funkcja oczysc()
     if wobcy == 'koniec':
         break
-    elif dane.count(":") == 1:  # sprawdzamy poprawnoœæ wprowadzonych danych
+    elif dane.count(":") == 1:  # sprawdzamy poprawnoÅ›Ä‡ wprowadzonych danych
         if wobcy in slownik:
-            print "Wyraz", wobcy, " i jego znaczenia s¹ ju¿ w s³owniku."
-            op = raw_input("Zast¹piæ wpis (t/n)? ")
-        # czy wyrazu nie ma w s³owniku? a mo¿e chcemy go zast¹piæ?
+            print "Wyraz", wobcy, " i jego znaczenia sÄ… juÅ¼ w sÅ‚owniku."
+            op = raw_input("ZastÄ…piÄ‡ wpis (t/n)? ")
+        # czy wyrazu nie ma w sÅ‚owniku? a moÅ¼e chcemy go zastÄ…piÄ‡?
         if wobcy not in slownik or op == "t":
-            znaczenia = t[1].split(",")  # podane znaczenia zapisujemy w liœcie
+            znaczenia = t[1].split(",")  # podane znaczenia zapisujemy w liÅ›cie
             znaczenia = map(oczysc, znaczenia)  # oczyszczamy elementy listy
             slownik[wobcy] = znaczenia
             nowy = True
     else:
-        print "B³êdny format!"
+        print "BÅ‚Ä™dny format!"
 
 if nowy:
     zapisz(slownik)
