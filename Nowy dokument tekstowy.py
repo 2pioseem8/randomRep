@@ -47,7 +47,7 @@ dmd read_csv.d
 
 Next the Python program, StdinToPDF.py:
 
-# StdinToPDF.py
+
 
 # Read the contents of stdin (standard input) and write it to a PDF file 
 # whose name is specified as a command line argument.
