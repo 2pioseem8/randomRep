@@ -8,7 +8,7 @@ lista = []
 for i in range(len(tupla)):
     lista.append(int(tupla[i]))
 
-print "Elementy i ich indeksy:"
+print "Elementy i indeksy ich:"
 for i, v in enumerate(lista):
     print v, "[",i,"]"
 
