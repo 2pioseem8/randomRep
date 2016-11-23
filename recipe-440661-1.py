@@ -1,7 +1,4 @@
-""" This modules provides a lightweight API to access Excel data.
-    There are many ways to read Excel data, including ODBC. This module
-    uses ADODB and has the advantage of only requiring a file name and a
-    sheet name (no setup required).
+
 """
 
 import win32com.client
