@@ -19,7 +19,7 @@ meta = doc.metadata
 doc.close()
 
 t1 = time.clock()                      # save current time again
-subprocess.call(["fileoptimizer64", fullname])   # now invoke FileOptimizer
+subprocess.call(["fileoptimizer64", fullname])   #sssss
 t2 = time.clock()                      # save current time again
 
 cdir = os.path.split(fullname)[0]      # split dir from filename
