@@ -12,32 +12,32 @@ print "Elementy i ich indeksy:"
 for i, v in enumerate(lista):
     print v, "[",i,"]"
 
-print "Elementy w odwróconym porz¹dku:"
+print "Elementy w odwrÃ³conym porzadku:"
 for e in reversed(lista):
     print e,
 
 print ""
-print "Elementy posortowane rosn¹co:"
+print "Elementy posortowane rosnÂ¹co:"
 for e in sorted(lista):
     print e,
 
 print ""
-e = int(raw_input("Któr¹ liczbê usun¹æ? "))
+e = int(raw_input("KtÃ³rÂ¹ liczbÃª usunÂ¹Ã¦? "))
 lista.remove(e)
 print lista
 
-a, i = input("Podaj element do dodania i indeks, przed którym ma siê on znaleŸæ: ")
+a, i = input("Podaj element do dodania i indeks, przed ktÃ³rym ma siÃª on znaleÅ¸Ã¦: ")
 lista.insert(i, a)
 print lista
 
-e = int(raw_input("Podaj liczbê, której wyst¹pienia w liœcie chcesz zliczyæ? "))
+e = int(raw_input("Podaj liczbÃª, ktÃ³rej wystÂ¹pienia w liÅ“cie chcesz zliczyÃ¦? "))
 print lista.count(e)
-print "Pierwszy indeks, pod którym zapisana jest podana liczba to: "
+print "Pierwszy indeks, pod ktÃ³rym zapisana jest podana liczba to: "
 print lista.index(e)
 
 print "Pobieramy ostatni element z listy: "
 print lista.pop()
 print lista
 
-i, j = input("Podaj indeks pocz¹tkowy i koñcowy, aby uzyskaæ frgament listy: ")
+i, j = input("Podaj indeks poczÂ¹tkowy i koÃ±cowy, aby uzyskaÃ¦ frgament listy: ")
 print lista[i:j]
