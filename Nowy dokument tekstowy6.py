@@ -27,7 +27,7 @@ while True:
 
 oceny = []  # pusta lista ocen
 ocena = None  # zmienna steruj¹ca pêtl¹ i do pobierania ocen
-print "\nAby przerwaæ wprowadzanie ocen, podaj 0 (zero)."
+print "\nAby przerwaæ wprowadzanie ocen, podaj 0."
 
 while not ocena:
     try:
