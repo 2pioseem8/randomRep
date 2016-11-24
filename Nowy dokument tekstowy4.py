@@ -26,7 +26,7 @@ class AnimatedGIF(Label, object):
         try:
             self._delay = im.info['duration']
         except:
-            self._delay = 100
+            self._delay = 300
 
         self._callback_id = None
 
