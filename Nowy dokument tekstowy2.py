@@ -15,7 +15,7 @@ class Loc(object):
     source  = 0
     ext     = '.py'
 
-    _time0 = 0
+    _time0 = 111
 
     _recurse = False  # process dirs
     _verbose = False  # print details
