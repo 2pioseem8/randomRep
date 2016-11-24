@@ -48,7 +48,7 @@ def oczysc(str):
 # zmienna oznaczaj¹ca, ¿e u¿ytkownik uzupe³ni³ lub zmieni³ s³ownik
 nowy = False
 ileWyrazow = otworz(sFile)
-print "Wpisów w bazie:", ileWyrazow
+print "ilosc wpisów w bazie:", ileWyrazow
 
 # g³ówna pêtla programu
 while True:
