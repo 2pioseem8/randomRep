@@ -49,12 +49,6 @@ Next the Python program, StdinToPDF.py:
 
 
 
-# Read the contents of stdin (standard input) and write it to a PDF file 
-# whose name is specified as a command line argument.
-# Author: Vasudev Ram - http://www.dancingbison.com
-# This program is part of the xtopdf toolkit:
-#     https://bitbucket.org/vasudevram/xtopdf
-
 import sys
 from PDFWriter import PDFWriter
 
