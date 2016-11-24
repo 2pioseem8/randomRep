@@ -25,7 +25,7 @@ while op != "n":  # dopóki wartoœæ zmiennej op jest inna ni¿ znak "n"
 
 
     else:
-        print "Z podanych odcinków nie mo¿na utworzyæ trójk¹ta prostok¹tnego."
+        print "Z podanych odcinków nie da sie utworzyæ trójk¹ta prostok¹tnego."
         op = raw_input("Spróbujesz jeszcze raz (t/n): ")
 
 
