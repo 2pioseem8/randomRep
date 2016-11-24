@@ -17,12 +17,12 @@ for e in reversed(lista):
     print e,
 
 print ""
-print "Elementy posortowane rosn¹co:"
+print "Elementy posortowane rosnaco:"
 for e in sorted(lista):
     print e,
 
 print ""
-e = int(raw_input("Któr¹ liczbê usun¹æ? "))
+e = int(raw_input("Które liczbe usunie? "))
 lista.remove(e)
 print lista
 
